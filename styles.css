@@ -1,0 +1,328 @@
+:root {
+  --color-texto: #2E2A45;
+  --color-soft-pink: #EC709A;
+  --color-butter-yellow: #F5E8AA;
+  --color-celeste: #A9DEF9;
+  --color-fondo: #FFFDF7;
+  --color-fondo-tarjeta: #FFFFFF;
+
+  --color-primario: var(--color-texto);
+  --color-secundario: var(--color-soft-pink);
+  --color-secundario-suave: var(--color-butter-yellow);
+  --color-acento: var(--color-soft-pink);
+
+  --fuente-titulos: 'Fraunces', serif;
+  --fuente-principal: 'Work Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+  line-height: 1.6;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  font-family: var(--fuente-titulos);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: var(--fuente-titulos);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+
+.sitio-header {
+  background-color: var(--color-primario);
+  padding: 1rem 0;
+}
+
+.contenedor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  color: var(--color-fondo);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.nav-lista {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: var(--color-fondo);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.nav-link:hover {
+  color: var(--color-celeste);
+}
+
+.enlace {
+  color: var(--color-primario);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.enlace:hover {
+  color: var(--color-celeste);
+}
+
+.hero {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background-color: var(--color-secundario-suave);
+  border-radius: 16px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-areas:
+    "texto"
+    "accesos";
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 5rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-areas: "texto accesos";
+    grid-template-columns: 1.3fr 1fr;
+    align-items: center;
+  }
+}
+
+.hero-accesos {
+  grid-area: accesos;
+  text-align: left;
+  background-color: var(--color-celeste);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.hero-accesos h2 {
+  color: var(--color-texto);
+}
+
+.lista-accesos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.hero-contenido {
+  grid-area: texto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.hero-contenido > * {
+  margin-bottom: 0;
+}
+
+.contenido-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contenido-flex > * {
+  margin-bottom: 0;
+}
+
+.hero-titulo {
+  text-align: center;
+}
+
+.hero-texto {
+  max-width: 600px;
+  color: var(--color-primario);
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.boton-accent {
+  background-color: var(--color-acento);
+  color: var(--color-primario);
+}
+
+.grilla-proyectos,
+.lista-proyectos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+  list-style: none;
+}
+
+.grilla-servicios {
+  display: grid;
+  grid-template-areas:
+    "landing"
+    "mantenimiento"
+    "branding";
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 2rem 1.5rem;
+}
+
+.grilla-servicios .tarjeta-landing { grid-area: landing; }
+.grilla-servicios .tarjeta-mantenimiento { grid-area: mantenimiento; }
+.grilla-servicios .tarjeta-branding { grid-area: branding; }
+
+@media (min-width: 768px) {
+  .grilla-servicios {
+    grid-template-areas:
+      "landing mantenimiento"
+      "branding branding";
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grilla-servicios {
+    grid-template-areas: "landing mantenimiento branding";
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tarjeta {
+  background-color: var(--color-fondo-tarjeta);
+  border: 2px solid var(--color-secundario);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.tarjeta-titulo {
+  color: var(--color-primario);
+}
+
+.pagina-interna {
+  padding: 3rem 1.5rem;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-areas:
+    "formulario"
+    "info";
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contacto-grid .contacto-formulario {
+  grid-area: formulario;
+}
+
+.contacto-grid .contacto-info {
+  grid-area: info;
+}
+
+@media (min-width: 1024px) {
+  .contacto-grid {
+    grid-template-areas: "formulario info";
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+  }
+}
+
+.seccion {
+  margin-bottom: 2.5rem;
+}
+
+.lista-skills {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo label {
+  font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+  font-family: var(--fuente-principal);
+  padding: 0.6rem;
+  border: 1px solid var(--color-secundario);
+  border-radius: 4px;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--color-celeste);
+  box-shadow: 0 0 0 3px var(--color-celeste);
+}
+
+.sitio-footer {
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
