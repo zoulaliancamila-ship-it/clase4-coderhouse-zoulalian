@@ -201,10 +201,18 @@ p {
 .grilla-proyectos,
 .lista-proyectos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   padding: 2rem 1.5rem;
   list-style: none;
+}
+
+@media (min-width: 768px) {
+  .grilla-proyectos,
+  .lista-proyectos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
 }
 
 .grilla-servicios {
@@ -285,6 +293,56 @@ p {
 .lista-skills {
   list-style: disc;
   padding-left: 1.5rem;
+}
+
+.grilla-habilidades {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .grilla-habilidades {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grilla-habilidades {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.grilla-proceso {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .grilla-proceso {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grilla-proceso {
+    gap: 2rem;
+  }
+}
+
+.paso-numero {
+  display: inline-block;
+  color: var(--color-secundario);
+  font-family: var(--fuente-titulos);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
 }
 
 .formulario-contacto {

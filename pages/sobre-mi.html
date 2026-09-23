@@ -20,7 +20,7 @@
       <nav class="nav-principal">
         <ul class="nav-lista">
           <li><a class="nav-link" href="../index.html">Inicio</a></li>
-          <li><a class="nav-link" href="sobre-mi.html">Sobre mí</a></li>
+          <li><a class="nav-link" href="sobre-mi.html" aria-current="page">Sobre mí</a></li>
           <li><a class="nav-link" href="proyectos.html">Proyectos</a></li>
           <li><a class="nav-link" href="servicios.html">Servicios</a></li>
           <li><a class="nav-link" href="contacto.html">Contacto</a></li>
@@ -41,12 +41,45 @@
 
     <section class="seccion">
       <h2>Habilidades</h2>
-      <ul class="lista-skills">
-        <li>HTML semántico</li>
-        <li>CSS</li>
-        <li>Box model y Flexbox</li>
-        <li>CSS Grid y Media Queries</li>
+      <ul class="grilla-habilidades">
+        <li class="tarjeta">
+          <h3 class="tarjeta-titulo">HTML semántico</h3>
+          <p>Estructuro cada página con etiquetas que describen su contenido, pensando en accesibilidad y SEO.</p>
+        </li>
+        <li class="tarjeta">
+          <h3 class="tarjeta-titulo">CSS</h3>
+          <p>Maquetado y estilos a medida, sin frameworks de más, para que cada sitio tenga su propia identidad.</p>
+        </li>
+        <li class="tarjeta">
+          <h3 class="tarjeta-titulo">Box model y Flexbox</h3>
+          <p>Alineo y distribuyo elementos con precisión, tanto en fila como en columna.</p>
+        </li>
+        <li class="tarjeta">
+          <h3 class="tarjeta-titulo">CSS Grid y Media Queries</h3>
+          <p>Armo grillas responsive que se adaptan de mobile a desktop sin perder el orden visual.</p>
+        </li>
       </ul>
+    </section>
+
+    <section class="seccion">
+      <h2>Cómo trabajo</h2>
+      <div class="grilla-proceso">
+        <article class="tarjeta">
+          <span class="paso-numero">Paso 1</span>
+          <h3 class="tarjeta-titulo">Descubrimiento</h3>
+          <p>Charlamos sobre tu marca, tu público y qué necesita tu landing page.</p>
+        </article>
+        <article class="tarjeta">
+          <span class="paso-numero">Paso 2</span>
+          <h3 class="tarjeta-titulo">Diseño y maquetado</h3>
+          <p>Armo la estructura HTML y el grid responsive, mobile-first.</p>
+        </article>
+        <article class="tarjeta">
+          <span class="paso-numero">Paso 3</span>
+          <h3 class="tarjeta-titulo">Entrega y ajustes</h3>
+          <p>Revisamos juntas el resultado en distintos tamaños de pantalla antes de publicar.</p>
+        </article>
+      </div>
     </section>
   </main>
 
